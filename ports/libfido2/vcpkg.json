@@ -7,11 +7,24 @@
   "supports": "!uwp & (x86 | x64) & windows",
   "dependencies": [
     "libcbor",
-    "openssl",
     {
       "name": "vcpkg-cmake",
       "host": true
     },
     "zlib"
-  ]
+  ],
+  "features": {
+    "libressl": {
+      "description": "Use libressl",
+      "dependencies": [
+        "libressl"
+      ]
+    },
+    "openssl": {
+      "description": "Use openssl",
+      "dependencies": [
+        "openssl"
+      ]
+    }
+  }
 }
